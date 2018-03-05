@@ -1,0 +1,433 @@
+*{
+
+}
+body{
+    font-size: 62.5%;
+    background-color: #f4cccc;
+}
+
+/*工具类样式*/
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/*样式*/
+
+ /*container*/
+ .container{
+     max-width: 50rem;
+     margin: 0 auto;
+ }
+.container h1{
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+}
+
+/*tasks*/
+.container .tasks{
+    width: 90%;
+   margin-left: 5%;
+    margin-right: 5%;
+ }
+
+/*tasks--add-task*/
+.tasks .add-task button{
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+.tasks .add-task button:active{
+   background-color:#3CC4FF ;
+}
+
+.tasks .add-task input {
+    width: 83%;
+    height: 2.499rem;
+    line-height: normal;
+    border-radius: 4px;
+    background-color: #ddd;
+    box-shadow: inset 1px 2px 3px 1px #aaa;
+    border: 0px solid #fff;
+    outline: none;
+    padding-left: 1%;
+}
+.tasks .add-task input::placeholder{
+      font-size: 15px;
+}
+.tasks .add-task button {
+    width: 15%;
+    height: 2.5rem;
+    border-radius: 2px;
+    background-color: #46b1e4;
+    border: 0px solid #fff;
+    padding: 2px 0;
+    box-shadow:1px 1px 3px 1px #aaa;
+    outline: none;
+}
+
+/*1em=16px
+
+  50em=900px
+  30em=780px
+
+*/
+@media only screen and (max-width: 50em) {
+
+}
+
+@media only screen and (min-width: 30.0625em) and (max-width: 50em) {
+    .container{
+        width: 90%;
+    }
+    .container h1{
+        font-size: 5rem;
+        margin-top: 6rem;
+    }
+    .tasks .add-task button{
+        font-size: 18px;
+    }
+
+    .tasks .add-task input {
+        height: 3rem;
+
+    }
+
+    .tasks .add-task button {
+        height: 3rem;
+    }
+}
+
+@media only screen and (max-width: 30em) {
+    .container{
+        width: 85%;
+    }
+    .container h1{
+        font-size: 3rem;
+        margin-top: 4rem;
+    }
+    .tasks .add-task button{
+        font-size: 10px;
+    }
+
+    .tasks .add-task input {
+        height: 3rem;
+    }
+
+    .tasks .add-task button {
+        height: 3rem;
+    }
+}
+
+
+/*tasks--task-list*/
+.tasks .task-list{
+    margin-top: 20px;
+    overflow: hidden;
+}
+.tasks .task-list .task-item{
+    display: inline-block;
+    width:100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    background-color: #fff;
+    border: 0px solid #fff;
+    box-shadow:1px 1px 3px 1px #aaa;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    border-radius: 3px;
+    transition: all .1s;
+}
+.task-list .task-item:hover{
+    background-color:#b6d7a8;
+    transition: all .1s;
+}
+.task-list .task-item:hover .task-list .task-item:hover + .task-list .task-item{
+    margin-top: 0.7em;
+}
+.tasks .task-list .task-item .check_span{
+    display: inline-block;
+    width: 6%;
+}
+.tasks .task-list .task-item .input_checkbox{
+    display: none;
+}
+.tasks .task-list .task-item .lb_ck{
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: 11px;
+    margin-left: 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    background-color: #d9d9d9;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+.tasks .task-list .task-item .input_checkbox:checked+.lb_ck{
+    background-color: #42d961;
+    border: 2px solid #d9d9d9;
+    transition: all 0.1s;
+}
+
+.tasks .task-list .task-item .task-content{
+    display: inline-block;
+    font-size: 15px;
+    width: 80%;
+}
+.tasks .task-list .task-item .bt_span{
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 5px;
+    color: #d9d9d9;
+    cursor: pointer;
+}
+.tasks .task-list .task-item .bt_span:hover{
+    color: #bc0000;
+}
+
+.task-item.completed:after {
+    content: " ";
+    height: 2px;
+    background: #bc0000;
+    width: 94%;
+    position: relative;
+    top: -28px;
+    display: block;
+    float: right;
+    transition: all .5s;
+}
+
+/*1em=16px
+
+  50em=900px
+  30em=780px
+
+*/
+@media only screen and (max-width: 50em) {
+
+}
+
+@media only screen and (min-width: 30.0625em) and (max-width: 50em) {
+    .tasks .task-list .task-item{
+        height: 3rem;
+        line-height: 3rem;
+    }
+    .tasks .task-list .task-item .bt_span{
+        font-size: 10px;
+
+    }
+
+}
+
+@media only screen and (max-width: 30em) {
+    .tasks .task-list .task-item .input_checkbox{
+        width: 5%;
+        margin-top: 19px;
+    }
+    .tasks .task-list .task-item{
+        height: 3.2rem;
+        line-height: 3.2rem;
+
+    }
+    .tasks .task-list .task-item .task-content{
+        display: inline-block;
+        font-size: 15px;
+        width: 70%;
+    }
+    .tasks .task-list .task-item .bt_span{
+        font-size: 10px;
+        margin-top: 18px;
+    }
+
+}
+
+
+/*tasks task-detail*/
+.tasks .task-detail{
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin:auto;
+    width: 30rem;
+    height: 25rem;
+    z-index: 1000;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 0px solid #fff;
+    box-shadow:1px 1px 3px 1px #aaa;
+}
+.tasks .task-detail .content{
+    font-size: 30px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.tasks .task-detail .desc textarea{
+    position: absolute;
+    left: 10px;
+    top: 60px;
+    width: 26rem;
+    height: 10rem;
+    border-radius: 3px;
+    background-color: #d9d9d9;
+    resize: none;
+    border: 0px solid #fff;
+    box-shadow: inset 1px 1px 1px #aaa;
+    outline: none;
+    font-size: 15px;
+}
+.tasks .task-detail .remind .input-date{
+    display: block;
+    position: absolute;
+    left: 10px;
+    margin:auto;
+    bottom: 100px;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 3px;
+    border: 0px solid #fff;
+    box-shadow: 0px 0px 1px #aaa;
+    outline: none;
+    text-align: center;
+}
+.tasks .task-detail .remind .input-submit{
+    display: block;
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 3px;
+    background-color: #46b1e4;
+    border: 0px solid #fff;
+    box-shadow:  1px 1px 1px #aaa;
+    outline: none;
+
+}
+.mask{
+    display: none;
+    background-color: rgba(50,50,50,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+
+/*1em=16px
+
+  50em=900px
+  30em=780px
+
+*/
+@media only screen and (max-width: 50em) {
+
+}
+
+@media only screen and (min-width: 30.0625em) and (max-width: 50em) {
+    .tasks .task-detail{
+        width: 25rem;
+        height: 20rem;
+    }
+    .tasks .task-detail .content{
+        font-size: 25px;
+    }
+    .tasks .task-detail .desc textarea{
+        width: 21rem;
+        height: 7rem;
+    }
+    .tasks .task-detail .remind .input-date{
+        width: 10rem;
+        height: 2rem;
+
+    }
+    .tasks .task-detail .remind .input-submit{
+        width: 10rem;
+        height: 2rem;
+    }
+}
+
+@media only screen and (max-width: 30em) {
+
+    .tasks .task-detail{
+        width: 70%;
+        height: 15rem;
+    }
+    .tasks .task-detail .content{
+        font-size: 15px;
+    }
+    .tasks .task-detail .desc textarea{
+        width: 70%;
+        height: 4rem;
+    }
+    .tasks .task-detail .remind .input-date{
+        width: 7rem;
+        height: 2rem;
+        bottom: 60px;
+    }
+    .tasks .task-detail .remind .input-submit{
+        width: 7rem;
+        height: 2rem;
+        left: 10px;
+        bottom: 20px;
+    }
+}

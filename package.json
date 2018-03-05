@@ -1,0 +1,17 @@
+{
+  "name": "jquerylisttodo",
+  "version": "1.0.0",
+  "description": "Simple_jqueryListTODO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rick_grimes",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-datetimepicker": "^2.5.11",
+    "normalize.css": "^7.0.0",
+    "store": "^2.0.12"
+  }
+}
